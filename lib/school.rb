@@ -11,4 +11,13 @@ class School
     @roster[grade] = [] if @roster[grade].nil?
     @roster[grade] << name
   end
+
+  def grade(grade)
+    @roster[grade]
+  end
+
+  def sort
+    @roster.sort!
+    @roster.map{|k, v| v.sort! }
+  end
 end
